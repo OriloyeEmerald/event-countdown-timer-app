@@ -1,73 +1,65 @@
-# React + TypeScript + Vite
+# Countdowns — Event Countdown Collection
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful, real-time countdown app built for the Frontend Developer evaluation.
 
-Currently, two official plugins are available:
+**Live Demo:** [https://event-countdown-timer-app.vercel.app]
+**Time spent:** ~22 hours (spread over 3 days)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What I Built & Why
 
-## React Compiler
+I chose **Option B (Event Countdown Collection)** because it let me focus on creative time visualization, smooth interactions, and delightful details — exactly what the brief asked for.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Key features implemented:
+- Add / Edit / Delete multiple events
+- Real-time ticking countdowns (updates every second)
+- Smart urgency colors + circular progress rings (red <7 days, orange <30 days, green otherwise)
+- Beautiful expired state with one-click delete
+- Custom confirmation modal (no ugly browser alerts)
+- Dark/light mode toggle with system preference + persistence
+- Fully responsive (mobile-first with floating action button)
+- All data persists via localStorage
+- Clean, accessible, and premium-feeling UI matching the Google Stitch reference
 
-## Expanding the ESLint configuration
+## Design & UX Choices
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Visual hierarchy** — Big countdown numbers + progress ring + urgency border make it instantly clear what matters most.
+- **Small delights** — Smooth theme toggle, hover scales, line-through on expired events, info hint in modal.
+- **Thoughtful interactions** — Modal re-uses for create/edit, real-time preview of urgency color, confirmation before delete.
+- **Accessibility** — Proper labels, keyboard-friendly, high contrast in both themes.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+I intentionally kept it simple yet polished — no unnecessary features.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## What I’d Improve With More Time
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Push notifications for events <24h away
+- Drag-to-reorder events
+- Export/import via JSON
+- Multiple themes or color customisation
+- Unit tests for the countdown hook
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Challenges Faced
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Getting real-time countdowns to stay perfectly in sync across cards (solved with a single shared interval in the hook).
+- Making Tailwind v4 + @theme work smoothly with VS Code IntelliSense (fixed with custom data).
+- Calculating accurate progress percentage while keeping the circular SVG clean.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Tech Stack
+
+- React + TypeScript + Vite
+- Tailwind CSS v4
+- Google Material Symbols
+- localStorage + custom hooks
+
+## How to Run Locally
+
+```bash
+git clone <your-repo>
+cd event-countdown
+npm install
+npm run dev
+
+
+<img width="1920" height="1080" alt="Screenshot (10)" src="https://github.com/user-attachments/assets/3459051b-a8f9-4657-90c1-c400ef1d4cf7" />
+<img width="1920" height="1080" alt="Screenshot (11)" src="https://github.com/user-attachments/assets/4f663d1e-262e-4dcb-8037-b0f0f6bc0ce0" />
+<img width="1920" height="1080" alt="Screenshot (12)" src="https://github.com/user-attachments/assets/21e314b5-a5bd-4b44-8e37-b52ac3d76221" />
+<img width="1920" height="1080" alt="Screenshot (13)" src="https://github.com/user-attachments/assets/cc7c9c06-bad2-44f2-965d-c5d1e971094d" />
