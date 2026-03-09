@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+--color-primary: #ec1313;
+--color-background-light: #f8f6f6;
+--color-background-dark: #1a0a0a;
+--color-card-dark: #2a1212;
+--color-accent-orange: #f97316;
+--color-accent-green: #22c55e;
+
+--font-family-display: "Inter", system-ui, sans-serif;
+}
+
+body {
+font-family: var(--font-family-display);
+min-height: max(884px, 100dvh);
+}
+
+button {
+    cursor: pointer;
+}
+
+.progress-ring__circle {
+transition: stroke-dashoffset 0.35s;
+transform: rotate(-90deg);
+transform-origin: 50% 50%;
+}
