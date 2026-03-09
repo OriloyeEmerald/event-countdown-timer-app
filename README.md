@@ -57,9 +57,8 @@ git clone <your-repo>
 cd event-countdown
 npm install
 npm run dev
+<img width="1920" height="1080" alt="Screenshot (13)" src="https://github.com/user-attachments/assets/d566cb54-6e62-4d90-a3ef-ab3536c176e5" />
+<img width="1920" height="1080" alt="Screenshot (12)" src="https://github.com/user-attachments/assets/43239e5c-df8c-4309-a06a-fb4d1cb02dde" />
+<img width="1920" height="1080" alt="Screenshot (11)" src="https://github.com/user-attachments/assets/990fb40c-940d-477a-86d8-627d27fe1788" />
+<img width="1920" height="1080" alt="Screenshot (10)" src="https://github.com/user-attachments/assets/e03694b0-b569-4c14-9c0e-2b4285117b77" />
 
-
-<img width="1920" height="1080" alt="Screenshot (10)" src="https://github.com/user-attachments/assets/3459051b-a8f9-4657-90c1-c400ef1d4cf7" />
-<img width="1920" height="1080" alt="Screenshot (11)" src="https://github.com/user-attachments/assets/4f663d1e-262e-4dcb-8037-b0f0f6bc0ce0" />
-<img width="1920" height="1080" alt="Screenshot (12)" src="https://github.com/user-attachments/assets/21e314b5-a5bd-4b44-8e37-b52ac3d76221" />
-<img width="1920" height="1080" alt="Screenshot (13)" src="https://github.com/user-attachments/assets/cc7c9c06-bad2-44f2-965d-c5d1e971094d" />
